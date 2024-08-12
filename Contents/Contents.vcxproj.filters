@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="PreCompile">
+      <UniqueIdentifier>{a2c3a0c9-1fbe-4ae0-a7ba-b3f70d0a5b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{410fff6e-2ea4-4dc2-986f-c11c90f3c521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{24e2245e-495c-41b4-a001-48e18f1120f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\MainTitle">
+      <UniqueIdentifier>{f5521efc-1ed7-4ba4-b76f-92ad6428fd07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{2725ac91-1a32-4115-a2cc-1f86e74e3738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Option">
+      <UniqueIdentifier>{e28f2a8c-94dc-4617-9504-5df354edf536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\ServerLevel">
+      <UniqueIdentifier>{7c929542-4fb1-442f-a7cc-1bf3a17213fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Protocol">
+      <UniqueIdentifier>{2c7c4b11-f86c-4b2b-8b6e-d3349507d2a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Block">
+      <UniqueIdentifier>{72f176bb-3c05-4479-9e5f-62c8628c17a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{a04418e5-d48f-42b4-9fbf-a320400c0254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\ServerLevel\ServerActor">
+      <UniqueIdentifier>{f6d2528e-d17e-47b8-8bb9-8576b6c473c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{e3519d18-b196-4cae-85f5-09714166564e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\MainPlayLevel">
+      <UniqueIdentifier>{1170aae8-151e-4f80-b2e5-b84e3c7d7284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Stage">
+      <UniqueIdentifier>{570d4c26-edb1-4be8-8434-b4c6934858aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Bomb">
+      <UniqueIdentifier>{0b2e129d-56fe-4eaf-9ca7-fe27b1972192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Item">
+      <UniqueIdentifier>{35424463-9a6c-4589-95d0-71e80d1d54a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Stage\Base">
+      <UniqueIdentifier>{54143f1f-a917-4d6e-92d3-fddf1968f138}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Block\Base">
+      <UniqueIdentifier>{df52a80a-76e2-4fac-8d4d-d1104e253884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Helper">
+      <UniqueIdentifier>{ffb710fc-a9c5-4508-af0f-aa58f41067ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map\Block\Component">
+      <UniqueIdentifier>{c6af0bb4-1cbf-4b36-9fe5-70e90afead69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\IntroLevel">
+      <UniqueIdentifier>{085f233a-85b8-4850-8c8d-730bd11e8eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\IntroLevel\Object">
+      <UniqueIdentifier>{36a5c6a8-1736-4725-9338-0e0028329614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{2d6be738-09f5-486b-8f7f-cc89e70a8824}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PreCompile.h">
+      <Filter>PreCompile</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyArcadeCore.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="MainTitleGameMode.h">
+      <Filter>Level\MainTitle</Filter>
+    </ClInclude>
+    <ClInclude Include="MapConstant.h">
+      <Filter>Map\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="MainPlayLevel.h">
+      <Filter>Level\MainPlayLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyArcadeEnum.h">
+      <Filter>Option</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerGameMode.h">
+      <Filter>Level\ServerLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="Packets.h">
+      <Filter>Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="VillageMap.h">
+      <Filter>Map\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerTestOtherPlayer.h">
+      <Filter>Level\ServerLevel\ServerActor</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerTestPlayer.h">
+      <Filter>Level\ServerLevel\ServerActor</Filter>
+    </ClInclude>
+    <ClInclude Include="CrazyArcadeDebugWindow.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="LobbyGameMode.h">
+      <Filter>Level\MainTitle</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Map\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="Box.h">
+      <Filter>Map\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveBox.h">
+      <Filter>Map\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="BombBase.h">
+      <Filter>Map\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemBase.h">
+      <Filter>Map\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="MapBase.h">
+      <Filter>Map\Stage\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockBase.h">
+      <Filter>Map\Block\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerHelper.h">
+      <Filter>Level\ServerLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="MapHelper.h">
+      <Filter>Map\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="ConnectionInfo.h">
+      <Filter>Level\ServerLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="Wave.h">
+      <Filter>Map\Bomb</Filter>
+    </ClInclude>
+    <ClInclude Include="ForestMap.h">
+      <Filter>Map\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerManager.h">
+      <Filter>Level\ServerLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="BushBase.h">
+      <Filter>Map\Block\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="NetGameMode.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="SpawnItemBlock.h">
+      <Filter>Map\Block\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="PirateMap.h">
+      <Filter>Map\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroGameMode.h">
+      <Filter>Level\IntroLevel</Filter>
+    </ClInclude>
+    <ClInclude Include="PirateMap02.h">
+      <Filter>Map\Stage</Filter>
+    </ClInclude>
+    <ClInclude Include="IntroFrame.h">
+      <Filter>Level\IntroLevel\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseUI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="PreCompile.cpp">
+      <Filter>PreCompile</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyArcadeCore.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MainTitleGameMode.cpp">
+      <Filter>Level\MainTitle</Filter>
+    </ClCompile>
+    <ClCompile Include="MapConstant.cpp">
+      <Filter>Map\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="MainPlayLevel.cpp">
+      <Filter>Level\MainPlayLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerGameMode.cpp">
+      <Filter>Level\ServerLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="Packets.cpp">
+      <Filter>Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="VillageMap.cpp">
+      <Filter>Map\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerTestOtherPlayer.cpp">
+      <Filter>Level\ServerLevel\ServerActor</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerTestPlayer.cpp">
+      <Filter>Level\ServerLevel\ServerActor</Filter>
+    </ClCompile>
+    <ClCompile Include="CrazyArcadeDebugWindow.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="LobbyGameMode.cpp">
+      <Filter>Level\MainTitle</Filter>
+    </ClCompile>
+    <ClCompile Include="TimerUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>Map\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="Box.cpp">
+      <Filter>Map\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveBox.cpp">
+      <Filter>Map\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="BombBase.cpp">
+      <Filter>Map\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemBase.cpp">
+      <Filter>Map\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="MapBase.cpp">
+      <Filter>Map\Stage\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="MapBase_Create.cpp">
+      <Filter>Map\Stage\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockBase.cpp">
+      <Filter>Map\Block\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerHelper.cpp">
+      <Filter>Level\ServerLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectionInfo.cpp">
+      <Filter>Level\ServerLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="Wave.cpp">
+      <Filter>Map\Bomb</Filter>
+    </ClCompile>
+    <ClCompile Include="ForestMap.cpp">
+      <Filter>Map\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerManager.cpp">
+      <Filter>Level\ServerLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="BushBase.cpp">
+      <Filter>Map\Block\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="NetGameMode.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="SpawnItemBlock.cpp">
+      <Filter>Map\Block\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="MapBase_Check.cpp">
+      <Filter>Map\Stage\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PirateMap.cpp">
+      <Filter>Map\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroGameMode.cpp">
+      <Filter>Level\IntroLevel</Filter>
+    </ClCompile>
+    <ClCompile Include="PirateMap02.cpp">
+      <Filter>Map\Stage</Filter>
+    </ClCompile>
+    <ClCompile Include="IntroFrame.cpp">
+      <Filter>Level\IntroLevel\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerState.cpp" />
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerState.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseUI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
