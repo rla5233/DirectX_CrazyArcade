@@ -502,14 +502,18 @@
     <CopyFileToFolders Include="ThirdParty\DirectxTex\Release\DirectXTex.pdb">
       <Filter>ThirdParty\DirectXTex\Release</Filter>
     </CopyFileToFolders>
-    <CopyFileToFolders Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.dll">
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.dll">
       <Filter>ThirdParty\FW1FontWrapper\Release</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.lib">
+    </None>
+    <None Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.pdb">
       <Filter>ThirdParty\FW1FontWrapper\Release</Filter>
-    </CopyFileToFolders>
-    <CopyFileToFolders Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.pdb">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="ThirdParty\FW1FontWrapper\Release\FW1FontWrapper.lib">
       <Filter>ThirdParty\FW1FontWrapper\Release</Filter>
-    </CopyFileToFolders>
+    </Library>
   </ItemGroup>
 </Project>
