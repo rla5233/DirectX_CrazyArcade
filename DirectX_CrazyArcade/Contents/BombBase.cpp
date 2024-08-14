@@ -82,7 +82,7 @@ void ABombBase::StateInit()
 
 			if (nullptr != SpawnPlayer)
 			{
-				SetBombPower(SpawnPlayer->GetBombPower());
+				BombPower = SpawnPlayer->GetBombPower() + 1;
 			}
 
 			CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
@@ -195,7 +195,7 @@ void ABombBase::SetCurPoint(FPoint _Point)
 void ABombBase::CreateLeftWave()
 {
 	// Left
-	for (int i = 1; i <= Power; i++)
+	for (int i = 1; i <= BombPower; i++)
 	{
 		FPoint WavePoint = { CurPoint.X - i, CurPoint.Y };
 		FVector WavePos = AMapBase::ConvertPointToLocation(WavePoint);
@@ -228,7 +228,7 @@ void ABombBase::CreateLeftWave()
 			}
 		}
 
-		if (i == Power)
+		if (i == BombPower)
 		{
 			AWave* LeftWave = GetWorld()->SpawnActor<AWave>("Wave").get();
 			LeftWave->SetActorLocation(WavePos);
@@ -245,7 +245,7 @@ void ABombBase::CreateLeftWave()
 void ABombBase::CreateRightWave()
 {
 	// Right
-	for (int i = 1; i <= Power; i++)
+	for (int i = 1; i <= BombPower; i++)
 	{
 		FPoint WavePoint = { CurPoint.X + i, CurPoint.Y };
 		FVector WavePos = AMapBase::ConvertPointToLocation(WavePoint);
@@ -278,7 +278,7 @@ void ABombBase::CreateRightWave()
 			}
 		}
 
-		if (i == Power)
+		if (i == BombPower)
 		{
 			AWave* LeftWave = GetWorld()->SpawnActor<AWave>("Wave").get();
 			LeftWave->SetActorLocation(WavePos);
@@ -295,7 +295,7 @@ void ABombBase::CreateRightWave()
 void ABombBase::CreateUpWave()
 {
 	// Up
-	for (int i = 1; i <= Power; i++)
+	for (int i = 1; i <= BombPower; i++)
 	{
 		FPoint WavePoint = { CurPoint.X, CurPoint.Y + i };
 		FVector WavePos = AMapBase::ConvertPointToLocation(WavePoint);
@@ -328,7 +328,7 @@ void ABombBase::CreateUpWave()
 			}
 		}
 
-		if (i == Power)
+		if (i == BombPower)
 		{
 			AWave* LeftWave = GetWorld()->SpawnActor<AWave>("Wave").get();
 			LeftWave->SetActorLocation(WavePos);
@@ -345,7 +345,7 @@ void ABombBase::CreateUpWave()
 void ABombBase::CreateDownWave()
 {
 	// Down
-	for (int i = 1; i <= Power; i++)
+	for (int i = 1; i <= BombPower; i++)
 	{
 		FPoint WavePoint = { CurPoint.X, CurPoint.Y - i };
 		FVector WavePos = AMapBase::ConvertPointToLocation(WavePoint);
@@ -378,7 +378,7 @@ void ABombBase::CreateDownWave()
 			}
 		}
 
-		if (i == Power)
+		if (i == BombPower)
 		{
 			AWave* LeftWave = GetWorld()->SpawnActor<AWave>("Wave").get();
 			LeftWave->SetActorLocation(WavePos);

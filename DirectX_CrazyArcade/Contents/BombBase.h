@@ -24,7 +24,7 @@ public:
 	void SetCurPoint(FPoint _Point);
 	inline void SetBombPower(int _Power)
 	{
-		Power = _Power + 1;
+		BombPower = _Power + 1;
 	}
 
 	inline void SetIdle()
@@ -64,7 +64,7 @@ private:
 	FPoint CurPoint = { -1, -1 };
 	const float ExplosionTime = 2.8f;
 	float ExplosionTimeCount = 0.0f;
-	int Power = -1;
+	int BombPower = -1;
 
 // FSM
 private:
