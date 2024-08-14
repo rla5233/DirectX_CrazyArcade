@@ -57,7 +57,7 @@ private:
 
 private:
 	AMainPlayLevel* PlayLevel = nullptr;
-	APlayer* Player = nullptr;
+	APlayer* SpawnPlayer = nullptr;
 
 	USpriteRenderer* Body;
 

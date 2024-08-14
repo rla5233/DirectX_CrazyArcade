@@ -80,9 +80,9 @@ void ABombBase::StateInit()
 			int BombOrder = AMapBase::GetRenderOrder(GetActorLocation());
 			Body->SetOrder(BombOrder);
 
-			if (nullptr != Player)
+			if (nullptr != SpawnPlayer)
 			{
-				SetBombPower(Player->GetBombPower());
+				SetBombPower(SpawnPlayer->GetBombPower());
 			}
 
 			CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
@@ -171,9 +171,9 @@ void ABombBase::Tick(float _DeltaTime)
 
 void ABombBase::PlayerBombCountUpdate()
 {
-	if (nullptr != Player)
+	if (nullptr != SpawnPlayer)
 	{
-		Player->IncreaseBombCount();
+		SpawnPlayer->IncreaseBombCount();
 	}
 }
 
@@ -184,7 +184,7 @@ void ABombBase::SetPlayer(APlayer* _Player)
 		return;
 	}
 
-	Player = _Player;
+	SpawnPlayer = _Player;
 }
 
 void ABombBase::SetCurPoint(FPoint _Point)
