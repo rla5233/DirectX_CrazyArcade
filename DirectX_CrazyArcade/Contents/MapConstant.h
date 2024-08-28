@@ -7,7 +7,7 @@ namespace MapImgRes
 	const std::string_view village_background		= "spr_village1_background.png";
 	const std::string_view Forest_background		= "spr_forest_background.png";
 	const std::string_view Pirate_background01		= "spr_Pirate_background01.png";
-	const std::string_view Pirate_background02		 = "spr_Pirate_background02.png";
+	const std::string_view Pirate_background02		= "spr_Pirate_background02.png";
 
 	
 	// Wall
