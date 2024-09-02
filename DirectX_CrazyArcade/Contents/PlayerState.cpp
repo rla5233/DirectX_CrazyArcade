@@ -4,7 +4,7 @@
 #include "MainPlayLevel.h"
 #include "MapBase.h"
 
-#include "BombBase.h"
+#include "WaterBomb.h"
 #include "ConnectionInfo.h"
 
 void APlayer::StateInit()

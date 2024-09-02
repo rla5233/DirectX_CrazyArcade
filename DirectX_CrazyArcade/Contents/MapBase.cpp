@@ -6,7 +6,7 @@
 #include "MainPlayLevel.h"
 #include "MapConstant.h"
 #include "BlockBase.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 #include "BushBase.h"
 #include "ItemBase.h"
 #include "Player.h"
@@ -66,7 +66,7 @@ void AMapBase::LevelEnd(ULevel* _NextLevel)
 				TileInfo[Y][X].Block = nullptr;
 			}
 
-			std::list<std::shared_ptr<ABombBase>>::iterator Iter; 
+			std::list<std::shared_ptr<AWaterBomb>>::iterator Iter; 
 			for (Iter = TileInfo[Y][X].AllBomb.begin(); Iter != TileInfo[Y][X].AllBomb.end(); ++Iter)
 			{
 				(*Iter) = nullptr;
@@ -264,7 +264,7 @@ EItemType AMapBase::IsItemTile(const FVector& _Pos)
 }
 
 // 현재 위치 Tile에 Bomb 스폰 함수 (실패시 nullptr 반환)
-std::shared_ptr<ABombBase> AMapBase::SpawnBomb(const FVector& _Pos, APlayer* _Player)
+std::shared_ptr<AWaterBomb> AMapBase::SpawnBomb(const FVector& _Pos, APlayer* _Player)
 {
 	FPoint CurPoint = ConvertLocationToPoint(_Pos);
 
@@ -277,7 +277,7 @@ std::shared_ptr<ABombBase> AMapBase::SpawnBomb(const FVector& _Pos, APlayer* _Pl
 	{
 		FVector TargetPos = ConvertPointToLocation(CurPoint);
 		TargetPos.Y += BombAdjustPosY;
-		std::shared_ptr<ABombBase> NewBomb = GetWorld()->SpawnActor<ABombBase>("Bomb");
+		std::shared_ptr<AWaterBomb> NewBomb = GetWorld()->SpawnActor<AWaterBomb>("Bomb");
 		NewBomb->SetActorLocation(TargetPos);
 		NewBomb->SetPlayer(_Player);
 		NewBomb->SetCurPoint(CurPoint);
@@ -293,12 +293,12 @@ std::shared_ptr<ABombBase> AMapBase::SpawnBomb(const FVector& _Pos, APlayer* _Pl
 }
 
 // 현재 위치 Tile에 Bomb 스폰 함수 (무조건 생성됨)
-std::shared_ptr<ABombBase> AMapBase::ServerSpawnBomb(const FVector& _Pos, APlayer* _Player)
+std::shared_ptr<AWaterBomb> AMapBase::ServerSpawnBomb(const FVector& _Pos, APlayer* _Player)
 {
 	FPoint CurPoint = ConvertLocationToPoint(_Pos);
 	FVector TargetPos = ConvertPointToLocation(CurPoint);
 	TargetPos.Y += BombAdjustPosY;
-	std::shared_ptr<ABombBase> NewBomb = GetWorld()->SpawnActor<ABombBase>("Bomb");
+	std::shared_ptr<AWaterBomb> NewBomb = GetWorld()->SpawnActor<AWaterBomb>("Bomb");
 	NewBomb->SetActorLocation(TargetPos);
 	NewBomb->SetPlayer(_Player);
 	NewBomb->SetCurPoint(CurPoint);

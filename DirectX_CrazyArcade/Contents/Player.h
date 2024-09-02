@@ -35,7 +35,7 @@ struct FCharacterTypeData
 };
 
 class AMainPlayLevel;
-class ABombBase;
+class AWaterBomb;
 
 class APlayer : public ANetActor
 {
@@ -129,7 +129,7 @@ protected:
 	std::string Name = "Player";
 	EPlayerDir PlayerDir = EPlayerDir::Down;
 	FVector PlayerDirVector = FVector::Zero;
-	ABombBase* Bomb = nullptr;
+	AWaterBomb* Bomb = nullptr;
 	ERiding Riding = ERiding::None;
 
 	int BaseBombCount = 1;

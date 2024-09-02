@@ -3,7 +3,7 @@
 
 class AMainPlayLevel;
 class ABlockBase;
-class ABombBase;
+class AWaterBomb;
 class AMoveBox;
 class ABushBase;
 class AItemBase;
@@ -19,7 +19,7 @@ public:
 	ABlockBase* Block = nullptr;
 	std::shared_ptr<ABushBase> Bush = nullptr;
 	std::shared_ptr<AItemBase> Item = nullptr;
-	std::list<std::shared_ptr<ABombBase>> AllBomb;
+	std::list<std::shared_ptr<AWaterBomb>> AllBomb;
 };
 
 // 설명 : Map 기초 클래스
@@ -27,7 +27,7 @@ class AMapBase : public AActor
 {
 	GENERATED_BODY(AActor)
 
-	friend ABombBase;
+	friend AWaterBomb;
 	friend ABushBase;
 	friend AMoveBox;
 	friend AWave;
@@ -68,8 +68,8 @@ public:
 	ECharacterColor IsColOtherPlayer(const FVector& _Pos, APlayer* _Player);
 	EItemType IsItemTile(const FVector& _Pos);
 	
-	std::shared_ptr<ABombBase> SpawnBomb(const FVector& _Pos, APlayer* _Player);
-	std::shared_ptr<ABombBase> ServerSpawnBomb(const FVector& _Pos, APlayer* _Player);
+	std::shared_ptr<AWaterBomb> SpawnBomb(const FVector& _Pos, APlayer* _Player);
+	std::shared_ptr<AWaterBomb> ServerSpawnBomb(const FVector& _Pos, APlayer* _Player);
 
 	void PlayerDelete(APlayer* _Player);
 	inline void PushAllPlayer(APlayer* _Player)

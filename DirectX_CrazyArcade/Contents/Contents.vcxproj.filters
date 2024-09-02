@@ -123,7 +123,7 @@
     <ClInclude Include="MoveBox.h">
       <Filter>Map\Block</Filter>
     </ClInclude>
-    <ClInclude Include="BombBase.h">
+    <ClInclude Include="WaterBomb.h">
       <Filter>Map\Bomb</Filter>
     </ClInclude>
     <ClInclude Include="InGameUI.h">
@@ -227,7 +227,7 @@
     <ClCompile Include="MoveBox.cpp">
       <Filter>Map\Block</Filter>
     </ClCompile>
-    <ClCompile Include="BombBase.cpp">
+    <ClCompile Include="WaterBomb.cpp">
       <Filter>Map\Bomb</Filter>
     </ClCompile>
     <ClCompile Include="ItemBase.cpp">

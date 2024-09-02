@@ -13,7 +13,7 @@
 #include <EngineBase/NetObject.h>
 #include "ServerHelper.h"
 #include "CrazyArcadeEnum.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 #include "MapBase.h"
 #include "ServerManager.h"
 
@@ -84,13 +84,13 @@ void AServerGameMode::HandlerInit()
 			{
 				GetWorld()->PushFunction([=]()
 					{
-						ABombBase* Bomb = UNetObject::GetNetObject<ABombBase>(_Packet->GetObjectToken());
+						AWaterBomb* Bomb = UNetObject::GetNetObject<AWaterBomb>(_Packet->GetObjectToken());
 						if (Bomb != nullptr) {
 							MsgBoxAssert("ÀÌ°Åµé¾î¿À¸éÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊ")   // -Test-
 						}
 
 						ServerHelper::EnumSpawn(GetWorld(), _Packet->SpawnSelect, _Packet->GetObjectToken(), _Packet->Pos);
-						Bomb = UNetObject::GetNetObject<ABombBase>(_Packet->GetObjectToken());
+						Bomb = UNetObject::GetNetObject<AWaterBomb>(_Packet->GetObjectToken());
 						Bomb->SetObjectToken(_Packet->GetObjectToken());
 						Bomb->SetBombPower(_Packet->Power);
 						Bomb->PushProtocol(_Packet);
@@ -149,13 +149,13 @@ void AServerGameMode::HandlerInit()
 			{
 				GetWorld()->PushFunction([=]()
 					{
-						ABombBase* Bomb = UNetObject::GetNetObject<ABombBase>(_Packet->GetObjectToken());
+						AWaterBomb* Bomb = UNetObject::GetNetObject<AWaterBomb>(_Packet->GetObjectToken());
 						if (Bomb != nullptr) {
 							MsgBoxAssert("ÀÌ°Åµé¾î¿À¸éÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊÀý´ë¾ÈµÊ")   // -Test-
 						}
 
 						ServerHelper::EnumSpawn(GetWorld(), _Packet->SpawnSelect, _Packet->GetObjectToken(), _Packet->Pos);
-						Bomb = UNetObject::GetNetObject<ABombBase>(_Packet->GetObjectToken());
+						Bomb = UNetObject::GetNetObject<AWaterBomb>(_Packet->GetObjectToken());
 						Bomb->SetObjectToken(_Packet->GetObjectToken());
 						Bomb->SetBombPower(_Packet->Power);
 						Bomb->PushProtocol(_Packet);

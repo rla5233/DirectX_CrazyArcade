@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BombBase.h">
+    <ClInclude Include="WaterBomb.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -144,7 +144,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BombBase.cpp">
+    <ClCompile Include="WaterBomb.cpp">
       <SubType>
       </SubType>
     </ClCompile>

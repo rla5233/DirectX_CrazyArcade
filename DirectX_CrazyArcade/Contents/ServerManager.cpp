@@ -7,7 +7,7 @@
 #include "MapHelper.h"
 #include "MapBase.h"
 #include "ServerHelper.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 #include "ServerTestOtherPlayer.h"
 #include <EngineBase/EngineClient.h>
 

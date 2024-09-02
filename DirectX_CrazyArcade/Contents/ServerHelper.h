@@ -5,7 +5,7 @@
 #include "MainPlayLevel.h"
 #include "MapBase.h"
 #include "ServerTestOtherPlayer.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 
 class UNetObject;
 
@@ -27,7 +27,7 @@ public:
 		case 2001:
 		{
 			AMainPlayLevel* PlayLevel = dynamic_cast<AMainPlayLevel*>(_Level->GetGameMode().get());
-			std::shared_ptr<ABombBase> Bomb = PlayLevel->GetMap()->ServerSpawnBomb(_Pos, nullptr);
+			std::shared_ptr<AWaterBomb> Bomb = PlayLevel->GetMap()->ServerSpawnBomb(_Pos, nullptr);
 			if (nullptr == Bomb) {
 				return;
 			}

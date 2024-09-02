@@ -6,19 +6,19 @@
 class AMainPlayLevel;
 class APlayer;
 
-class ABombBase : public ANetActor
+class AWaterBomb : public ANetActor
 {
 	GENERATED_BODY(ANetActor)
 public:
 	// constrcuter destructer
-	ABombBase();
-	~ABombBase();
+	AWaterBomb();
+	~AWaterBomb();
 
 	// delete Function
-	ABombBase(const ABombBase& _Other) = delete;
-	ABombBase(ABombBase&& _Other) noexcept = delete;
-	ABombBase& operator=(const ABombBase& _Other) = delete;
-	ABombBase& operator=(ABombBase&& _Other) noexcept = delete;
+	AWaterBomb(const AWaterBomb& _Other) = delete;
+	AWaterBomb(AWaterBomb&& _Other) noexcept = delete;
+	AWaterBomb& operator=(const AWaterBomb& _Other) = delete;
+	AWaterBomb& operator=(AWaterBomb&& _Other) noexcept = delete;
 
 	void SetPlayer(APlayer* _Player);
 	void SetCurPoint(FPoint _Point);

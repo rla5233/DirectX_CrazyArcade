@@ -1,5 +1,5 @@
 #include "PreCompile.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 
 #include "MainPlayLevel.h"
 #include "MapConstant.h"
@@ -13,7 +13,7 @@
 
 #include "ServerTestPlayer.h"
 
-ABombBase::ABombBase()
+AWaterBomb::AWaterBomb()
 {
 	UDefaultSceneComponent* Root = CreateDefaultSubObject<UDefaultSceneComponent>("Root");
 
@@ -23,11 +23,11 @@ ABombBase::ABombBase()
 	SetRoot(Root);
 }
 
-ABombBase::~ABombBase()
+AWaterBomb::~AWaterBomb()
 {
 }
 
-void ABombBase::BeginPlay()
+void AWaterBomb::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -38,27 +38,27 @@ void ABombBase::BeginPlay()
 	PlayLevel = dynamic_cast<AMainPlayLevel*>(GetWorld()->GetGameMode().get());	
 }
 
-void ABombBase::LevelStart(ULevel* _PrevLevel)
+void AWaterBomb::LevelStart(ULevel* _PrevLevel)
 {
 	Super::LevelStart(_PrevLevel);
 
 	State.CreateState(BombState::idle);
 }
 
-void ABombBase::LevelEnd(ULevel* _NextLevel)
+void AWaterBomb::LevelEnd(ULevel* _NextLevel)
 {
 	Super::LevelEnd(_NextLevel);
 
 	Destroy();
 }
 
-void ABombBase::SetImgCutting()
+void AWaterBomb::SetImgCutting()
 {
 	UEngineSprite::CreateCutting(MapImgRes::bomb, 3, 1);
 	UEngineSprite::CreateCutting(MapImgRes::bomb_effect_center, 3, 1);
 }
 
-void ABombBase::RendererInit()
+void AWaterBomb::RendererInit()
 {
 	float BlockSize = AMapBase::GetBlockSize();
 
@@ -68,7 +68,7 @@ void ABombBase::RendererInit()
 	Body->SetActive(false);
 }
 
-void ABombBase::StateInit()
+void AWaterBomb::StateInit()
 {
 	// State Create
 	State.CreateState(BombState::idle);
@@ -162,14 +162,14 @@ void ABombBase::StateInit()
 	);
 }
 
-void ABombBase::Tick(float _DeltaTime)
+void AWaterBomb::Tick(float _DeltaTime)
 {
 	Super::Tick(_DeltaTime);
 
 	State.Update(_DeltaTime);
 }
 
-void ABombBase::PlayerBombCountUpdate()
+void AWaterBomb::PlayerBombCountUpdate()
 {
 	if (nullptr != SpawnPlayer)
 	{
@@ -177,7 +177,7 @@ void ABombBase::PlayerBombCountUpdate()
 	}
 }
 
-void ABombBase::SetPlayer(APlayer* _Player)
+void AWaterBomb::SetPlayer(APlayer* _Player)
 {
 	if (nullptr == _Player)
 	{
@@ -187,12 +187,12 @@ void ABombBase::SetPlayer(APlayer* _Player)
 	SpawnPlayer = _Player;
 }
 
-void ABombBase::SetCurPoint(FPoint _Point)
+void AWaterBomb::SetCurPoint(FPoint _Point)
 {
 	CurPoint = _Point;
 }
 
-void ABombBase::CreateLeftWave()
+void AWaterBomb::CreateLeftWave()
 {
 	// Left
 	for (int i = 1; i <= BombPower; i++)
@@ -219,7 +219,7 @@ void ABombBase::CreateLeftWave()
 			break;
 		}
 
-		for (std::shared_ptr<ABombBase> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
+		for (std::shared_ptr<AWaterBomb> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
 		{
 			if (nullptr != Bomb && BombState::explosion != Bomb->State.GetCurStateName())
 			{
@@ -242,7 +242,7 @@ void ABombBase::CreateLeftWave()
 	}
 }
 
-void ABombBase::CreateRightWave()
+void AWaterBomb::CreateRightWave()
 {
 	// Right
 	for (int i = 1; i <= BombPower; i++)
@@ -269,7 +269,7 @@ void ABombBase::CreateRightWave()
 			break;
 		}
 
-		for (std::shared_ptr<ABombBase> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
+		for (std::shared_ptr<AWaterBomb> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
 		{
 			if (nullptr != Bomb && BombState::explosion != Bomb->State.GetCurStateName())
 			{
@@ -292,7 +292,7 @@ void ABombBase::CreateRightWave()
 	}
 }
 
-void ABombBase::CreateUpWave()
+void AWaterBomb::CreateUpWave()
 {
 	// Up
 	for (int i = 1; i <= BombPower; i++)
@@ -319,7 +319,7 @@ void ABombBase::CreateUpWave()
 			break;
 		}
 
-		for (std::shared_ptr<ABombBase> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
+		for (std::shared_ptr<AWaterBomb> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
 		{
 			if (nullptr != Bomb && BombState::explosion != Bomb->State.GetCurStateName())
 			{
@@ -342,7 +342,7 @@ void ABombBase::CreateUpWave()
 	}
 }
 
-void ABombBase::CreateDownWave()
+void AWaterBomb::CreateDownWave()
 {
 	// Down
 	for (int i = 1; i <= BombPower; i++)
@@ -369,7 +369,7 @@ void ABombBase::CreateDownWave()
 			break;
 		}
 
-		for (std::shared_ptr<ABombBase> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
+		for (std::shared_ptr<AWaterBomb> Bomb : PlayLevel->GetMap()->GetTileInfo(WavePoint).AllBomb)
 		{
 			if (nullptr != Bomb && BombState::explosion != Bomb->State.GetCurStateName())
 			{

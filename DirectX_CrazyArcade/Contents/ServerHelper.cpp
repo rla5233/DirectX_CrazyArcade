@@ -1,4 +1,4 @@
 #include "PreCompile.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 #include "ServerHelper.h"
 

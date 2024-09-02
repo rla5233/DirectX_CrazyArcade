@@ -3,7 +3,7 @@
 #include "Packets.h"
 #include "CrazyArcadeCore.h"
 #include "ServerTestOtherPlayer.h"
-#include "BombBase.h"
+#include "WaterBomb.h"
 
 #include "MainPlayLevel.h"
 #include "MapBase.h"
