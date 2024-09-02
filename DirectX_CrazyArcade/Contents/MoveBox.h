@@ -1,6 +1,5 @@
 #pragma once
 #include "Box.h"
-#include "SpawnItemBlock.h"
 #include "MapConstant.h"
 
 // Ό³Έν : MoveBox Block

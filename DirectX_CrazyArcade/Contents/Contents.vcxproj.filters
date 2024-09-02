@@ -58,9 +58,6 @@
     <Filter Include="Map\Helper">
       <UniqueIdentifier>{ffb710fc-a9c5-4508-af0f-aa58f41067ed}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Map\Block\Component">
-      <UniqueIdentifier>{c6af0bb4-1cbf-4b36-9fe5-70e90afead69}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Level\IntroLevel">
       <UniqueIdentifier>{085f233a-85b8-4850-8c8d-730bd11e8eb8}</UniqueIdentifier>
     </Filter>
@@ -165,9 +162,6 @@
     <ClInclude Include="NetGameMode.h">
       <Filter>Level</Filter>
     </ClInclude>
-    <ClInclude Include="SpawnItemBlock.h">
-      <Filter>Map\Block\Component</Filter>
-    </ClInclude>
     <ClInclude Include="PirateMap.h">
       <Filter>Map\Stage</Filter>
     </ClInclude>
@@ -271,9 +265,6 @@
     </ClCompile>
     <ClCompile Include="NetGameMode.cpp">
       <Filter>Level</Filter>
-    </ClCompile>
-    <ClCompile Include="SpawnItemBlock.cpp">
-      <Filter>Map\Block\Component</Filter>
     </ClCompile>
     <ClCompile Include="MapBase_Check.cpp">
       <Filter>Map\Stage\Base</Filter>

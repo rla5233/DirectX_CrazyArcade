@@ -17,7 +17,6 @@ void ABox::BeginPlay()
 {
 	Super::BeginPlay();
 
-	USpawnItemBlock::SetBlock(this);
 	SetBlockType(EBlockType::Box);
 }
 
@@ -46,7 +45,7 @@ void ABox::StateInit()
 			if (true == GetBody()->IsCurAnimationEnd())
 			{
 				FPoint CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
-				PlayLevel->GetMap()->CreateItem(CurPoint, GetSpawnItemType());
+				PlayLevel->GetMap()->CreateItem(CurPoint, ItemType);
 				PlayLevel->GetMap()->GetTileInfo(CurPoint).Block = nullptr;
 				Destroy();
 			}

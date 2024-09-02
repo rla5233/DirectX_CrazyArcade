@@ -109,7 +109,7 @@ void AMoveBox::StateInit()
 			if (true == GetBody()->IsCurAnimationEnd() || false == GetBody()->IsActive())
 			{
 				FPoint CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
-				PlayLevel->GetMap()->CreateItem(CurPoint, GetSpawnItemType());
+				PlayLevel->GetMap()->CreateItem(CurPoint, ItemType);
 				PlayLevel->GetMap()->GetTileInfo(CurPoint).Block = nullptr;
 				Destroy();
 			}
