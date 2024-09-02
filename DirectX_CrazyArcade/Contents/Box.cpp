@@ -47,7 +47,6 @@ void ABox::StateInit()
 			{
 				FPoint CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
 				PlayLevel->GetMap()->CreateItem(CurPoint, GetSpawnItemType());
-
 				PlayLevel->GetMap()->GetTileInfo(CurPoint).Block = nullptr;
 				Destroy();
 			}

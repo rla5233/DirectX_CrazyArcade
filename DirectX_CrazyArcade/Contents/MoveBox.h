@@ -1,12 +1,12 @@
 #pragma once
-#include "BlockBase.h"
+#include "Box.h"
 #include "SpawnItemBlock.h"
 #include "MapConstant.h"
 
 // Ό³Έν : MoveBox Block
-class AMoveBox : public ABlockBase, public USpawnItemBlock
+class AMoveBox : public ABox
 {
-	GENERATED_BODY(ABlockBase)
+	GENERATED_BODY(ABox)
 public:
 	// constrcuter destructer
 	AMoveBox();

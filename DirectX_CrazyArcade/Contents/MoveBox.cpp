@@ -32,8 +32,6 @@ void AMoveBox::BeginPlay()
 	}
 
 	UCrazyArcadeCore::NetManager.SetCommonToken(this);
-
-	USpawnItemBlock::SetBlock(this);
 	SetBlockType(EBlockType::MoveBox);
 }
 
@@ -43,7 +41,6 @@ void AMoveBox::StateInit()
 	 
 	// State Create
 	State.CreateState(BlockState::move);
-	State.CreateState(BlockState::destroy);
 
 	// State Start
 	State.SetStartFunction(BlockState::move, [=]
@@ -113,9 +110,7 @@ void AMoveBox::StateInit()
 			{
 				FPoint CurPoint = AMapBase::ConvertLocationToPoint(GetActorLocation());
 				PlayLevel->GetMap()->CreateItem(CurPoint, GetSpawnItemType());
-
 				PlayLevel->GetMap()->GetTileInfo(CurPoint).Block = nullptr;
-
 				Destroy();
 			}
 		}
