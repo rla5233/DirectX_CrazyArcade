@@ -17,6 +17,17 @@ Level4의 App 프로젝트를 시작 프로젝트로 설정해 주세요.
 ![image](https://github.com/user-attachments/assets/670a6977-bb40-4c88-a305-bccedc1acec8)
 <br/><br/>
 
+## 게임 실행
+#### 방 만들기   
+게임 시작 화면에서 1P 키를 통해 방을 만들 수 있습니다.   
+<img src="https://github.com/user-attachments/assets/1aaa2bb2-a927-49b4-94e7-f6eaf50a13c2" width="560" height="420">
+
+#### 방 입장하기
+게임 시작 화면에서 방장의 ip 주소를 입력하고 2P 키를 통해 방에 입장할 수 있습니다.      
+<img src="https://github.com/user-attachments/assets/019cf158-fbf3-41e8-a519-08a363568f22" width="560" height="420">
+
+
+
 ## 프로젝트 설명
 <br/><br/>
 
