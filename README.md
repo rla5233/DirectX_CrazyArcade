@@ -39,5 +39,5 @@ Level4의 App 프로젝트를 시작 프로젝트로 설정해 주세요.
 <br/><br/>
 
 ## YouTube
-https://www.youtube.com/watch?v=KM4zxDUAN38
+https://www.youtube.com/watch?v=zVhzJY8a-5s
 <br/><br/>
